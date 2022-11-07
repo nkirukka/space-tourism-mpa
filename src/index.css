@@ -1,3 +1,16 @@
+/* ### Google font: Barlow Condensed */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600&display=swap');
+/* ### Google font: Barlow */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500&display=swap');
+/* ### Google font: Bellefair */
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+
+:root{
+  --ff-b-condensed: 'Barlow Condensed', sans-serif;
+  --ff-barlow: 'Barlow', sans-serif;
+  --ff-bellefair: 'Bellefair', serif;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +18,29 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+/* ### General styles */
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+img{
+  width: 100%;
+}
+.ff-barlow_cond{
+  font-family: var(--ff-b-condensed);
+}
+.ff-barlow{
+  font-family: var(--ff-barlow);
+}
+.ff-bellefair{
+  font-family: var(--ff-bellefair);
 }
