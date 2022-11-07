@@ -1,85 +1,146 @@
-.Navbar{
-    position: absolute;
-    top: 2em;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    margin: auto;
+.Navbar {
+  position: absolute;
+  top: 2em;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
 }
-.Logo-container{
-    width: 2.7em;
+.Logo-container {
+  width: 2.7em;
 }
-.Nav{
+.Nav {
+  position: relative;
+}
+.Close {
+  width: 40px;
+  height: 40px;
+  margin: -2em 0em 3em 70%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.Nav-group {
+  position: absolute;
+  top: -2.1em;
+  left: calc(6vw + 1px);
+  display: flex;
+  flex-direction: column;
+  background: rgba(42, 35, 56, 0.26);
+  width: calc(65vw + 1px);
+  height: calc(90vh + 6px);
+  padding-top: 5em;
+  backdrop-filter: blur(30px);
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.Nav-group.active {
+  left: calc(-56vw + 1px);
+}
+.Nav-group ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3em;
+  margin-top: 2em;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.Nav-group span {
+  margin-right: 0.5em;
+}
+.Nav-group li {
+  position: relative;
+  width: fit-content;
+}
+.Nav-group li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.5em;
+  width: 0%;
+  height: 2px;
+  background: none repeat scroll 0 0 #ffffff;
+  transition: all 0.5s ease-out;
+}
+.Nav-group li:hover::after {
+  width: 100%;
+}
+.Nav-group a {
+  color: rgb(255, 255, 255);
+  font-weight: 200;
+}
+.Hamburger {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 2em;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 50em) {
+  .Hamburger {
+    display: none;
+  }
+  .Nav-group {
     position: relative;
+    /* top: 2em; */
+    left: calc(4.5vw + 1px);
+    width: calc(48vw + 1px);
+    height: calc(10vh + 1px);
+    justify-content: center;
+    align-items: center;
+    padding: 1em 2.5em 0em 0em;
+  }
+  .Nav-group ul {
+    flex-direction: row;
+    margin-top: 0;
+  }
+  .Nav-group li::after {
+    bottom: -1.5em;
+  }
+  .Close {
+    display: none;
+  }
+  .Nav-group span {
+    display: none;
+  }
 }
-.Close{
-    width: 35px;
-    height: 35px;
-    margin: -2em 0em 3em 70%;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-}
-.Nav-group{
-    position: absolute;
-    top: -2.1em;
-    left: calc(6vw + 1px);
-    display: flex;
-    flex-direction: column;
-    background: rgba(42, 35, 56, 0.26);
-    width: calc(65vw + 1px);
-    height: calc(100vh + 1px);
-    padding-top: 5em;
-    backdrop-filter: blur(10px);
-    transition: all .4s cubic-bezier(0.215, 0.610, 0.355, 1);
-}
-.Nav-group.active{
-    left: calc(-56vw + 1px);
-}
-.Nav-group ul{
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
+@media only screen and (min-width: 67em) {
+  .Navbar {
     margin-top: 2em;
-    text-transform: uppercase;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-.Nav-group span{
-    margin-right: .5em;
-}
-.Nav-group li{
-    position: relative;
-    width: fit-content;
-}
-.Nav-group li::after{
+  }
+  .Nav::before {
     content: "";
     position: absolute;
-    left: 0;
-    bottom: -.5em;
-    width: 0%;
-    height: 2px;
-    background: none repeat scroll 0 0 #ffffff;
-    transition: all .5s ease-out;
+    left: calc(-15vw + 1px);
+    bottom: calc(10vh + 1px);
+    width: calc(22vw + 1px);
+    height: 1px;
+    background: #979797;
+    z-index: 2;
+  }
+  .Nav-group {
+    width: calc(58vw + 1px);
+    max-width: 46em;
+    left: calc(4.5vw + 10px);
+  }
+  .Nav-group ul {
+    gap: 3em;
+  }
+  .Nav-group span {
+    display: inline;
+  }
 }
-.Nav-group li:hover::after{
-    width: 100%;
-}
-.Nav-group a{
-    color: rgb(255, 255, 255);
-    font-weight: 200;
-}
-.Hamburger{
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    height: 2em;
-    background: none;
-    border: none;
-    cursor: pointer;
+@media only screen and (min-width: 1254px) {
+  .Nav::before {
+    width: calc(32vw + 1px);
+    left: calc(-25vw + 1px);
+  }
 }

@@ -46,6 +46,7 @@ const Navbar = () => {
                     <ul>
                         {navItems.map((data) => {
                             return <li key={data.path}
+                                onClick={()=>{setIsOpen(false)}}
                                 className="ff-barlow_cond" >
                                 <span className="ff-barlow_cond">{data.id}</span>
                                 <Link to={data.path}>{data.name}</Link>
