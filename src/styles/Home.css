@@ -1,13 +1,15 @@
 .Home {
   background: url("../starter-code/assets/home/background-home-mobile.jpg")
     no-repeat center/cover;
-  height: calc(100vh + 1px);
+  height: 100vh;
+  width: calc(100vw + 1px);
   color: #d0d6f9;
   text-align: center;
   padding-top: 5em;
 }
 .Space {
   width: 85%;
+  max-width: 26.5em;
   height: calc(90vh + 1px);
   margin: 4em auto 0;
 }
@@ -19,40 +21,39 @@
 }
 .Space span {
   display: block;
-  font-size: 80px;
+  font-size: 5rem;
   font-weight: 200;
   color: #ffff;
 }
 .Space p {
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 200;
   line-height: 1.8em;
   margin-top: 2em;
 }
-.Explore{
-    width: 250px;
-    height: 250px;
-    margin: 4em auto 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: transparent;
-    border-radius: 50%;
-    transition: background .4s ease;
-
+.Explore {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border-radius: 50%;
+  transition: background 0.4s ease;
 }
-.Explore:hover{
-    background: #97979794;
+.Explore:hover {
+  background: #97979794;
 }
-.Explore > a{
-    background: rgb(255, 255, 255);
-    width: 150px;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    color: #0B0D17;
+.Explore > a {
+  background: rgb(255, 255, 255);
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #0b0d17;
 }
 
 /* ### Tablets */
@@ -61,11 +62,52 @@
     background: url("../starter-code/assets/home/background-home-tablet.jpg")
       no-repeat center/cover;
   }
+  .Space h1 {
+    font-size: 1.25rem;
+  }
+  .Space span {
+    font-size: 8rem;
+  }
+  .Space p {
+    font-size: 1.2rem;
+  }
+  .Explore {
+    margin-top: 0;
+  }
 }
 /* ### Desktop */
 @media only screen and (min-width: 67em) {
   .Home {
     background: url("../starter-code/assets/home/background-home-desktop.jpg")
       no-repeat center/cover;
+  }
+  .Space {
+    max-width: 83em;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 10em;
+  }
+  .Space-inner {
+    max-width: 40em;
+  }
+  .Space p{
+    font-size: 1.5rem;
+  }
+  .Space h1{
+    font-size: 1.5rem;
+  }
+  .Space span{
+    font-size: 10rem;
+  }
+  .Explore{
+    height: 400px;
+    width: 400px;
+    margin-top: 9em;
+  }
+  .Explore a{
+    height: 250px;
+    width: 250px;
+    font-size: 2rem;
   }
 }
