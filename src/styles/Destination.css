@@ -1,0 +1,5 @@
+.Destination{
+    background: url("../starter-code/assets/destination/background-destination-mobile.jpg") no-repeat center/cover;
+    height: calc(100vh + 1px);
+    color: #fff;
+}
