@@ -10,30 +10,40 @@ const Destination = () => {
 
   return (
     <section className='Destination'>
-      <img src={images.png} alt={name} />
-
+      <div className='Planets'>
+        <h2 className='ff-barlow_cond'><span>01</span> PICK YOUR DESTINATION</h2>
+        <img src={images.png} alt={name} title={name} />
+      </div>
+      
       <article className='Destination__details'>
         <div>
           {places.map((item, idx) => {
-            return <button onClick={()=>{setValue(idx)}}>{ item.name}</button>
+            return <button
+              type='button'
+              className='ff-barlow_cond'
+              key={idx}
+              onClick={() => { setValue(idx) }}
+            >
+              {item.name.toUpperCase()}
+            </button>
           })}
         </div>
         
-        <h2>{name}</h2>
-        <p>{description}</p>
+        <h3 className='ff-bellefair'>{name.toUpperCase()}</h3>
+        <p className='ff-barlow Description'>{description}</p>
         
         <article className='Avg-est'>
 
           {/* Average */}
           <div>
-            <p>AVG. DISTANCE</p>
-            <span>{distance}</span>
+            <p className='ff-barlow_cond'>AVG. DISTANCE</p>
+            <span className='ff-bellefair'>{distance}</span>
           </div>
 
           {/* Distance */}
           <div>
-            <p>EST. TRAVEL TIME</p>
-            <span>{travel}</span>
+            <p className='ff-barlow_cond'>EST. TRAVEL TIME</p>
+            <span className='ff-bellefair'>{travel}</span>
           </div>
         </article>
       </article>
