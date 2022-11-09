@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import logo from '../starter-code/assets/shared/logo.svg'
 import closeIcon from '../starter-code/assets/shared/icon-close.svg'
@@ -39,17 +39,25 @@ const Navbar = () => {
                 <img src={logo} alt='nav logo' />
             </section>
             
-            <button className="Hamburger" onClick={handleClick}><img src={hamburger} alt='open' /></button>
+            <button className="Hamburger"
+                onClick={handleClick}>
+                <img src={hamburger} alt='open' />
+            </button>
             <nav className={`Nav ${isOpen ? 'active' : null}`}>
                 <div className={`Nav-group ${isOpen ? 'active' : null}`}>
-                    <button className="Close" onClick={()=>{setIsOpen(false)}}><img src={closeIcon} alt="close" /></button>
+                    <button className="Close"
+                        onClick={() => { setIsOpen(false) }}>
+                        <img src={closeIcon} alt="close" /></button>
                     <ul>
                         {navItems.map((data) => {
                             return <li key={data.path}
                                 onClick={()=>{setIsOpen(false)}}
                                 className="ff-barlow_cond" >
                                 <span className="ff-barlow_cond">{data.id}</span>
-                                <Link to={data.path}>{data.name}</Link>
+                                <NavLink
+                                    to={data.path}
+                                    className={({ isActive }) => (isActive ? 'Active-nav' : null)}
+                                >{data.name}</NavLink>
                             </li>
                         })}
               
