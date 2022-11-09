@@ -1,5 +1,80 @@
-.Destination{
-    background: url("../starter-code/assets/destination/background-destination-mobile.jpg") no-repeat center/cover;
-    height: calc(100vh + 1px);
+.Destination {
+  background: url("../starter-code/assets/destination/background-destination-mobile.jpg")
+    no-repeat center/cover;
+  height: calc(100vh + 1px);
+  color: #d0d6f9;
+  text-align: center;
+  padding-top: 4em;
+}
+.Planets {
+  width: 85%;
+  margin: 2.5em auto 1.5em;
+}
+.Planets h2 {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 2.5px;
+}
+.Planets span {
+  font-size: 1rem;
+  font-weight: 100;
+  margin-right: 2px;
+  opacity: 0.6;
+}
+.Destination img {
+  margin-top: 2em;
+  width: 8em;
+  height: 8em;
+}
+.Destination__details {
+  width: 85%;
+  margin: auto;
+}
+.Destination__details button {
+  color: #d0d6f9;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding-bottom: .5em;
+  font-size: 1.4rem;
+  font-weight: 200;
+  letter-spacing: 2.5px;
+  transition: border-bottom .4s cubic-bezier(0.19, 1, 0.22, 1);
+  cursor: pointer;
+}
+.Destination__details button:hover,
+.Destination__details button:focus {
+color: #ffffff;
+font-weight: 200;
+border-bottom: 2px solid #fff;
+}
+.Destination__details button + button{
+margin-left: 5px;
+}
+.Destination__details h3{
     color: #fff;
+    font-size: 3.9rem;
+    font-weight: 200;
+    margin: .5em auto 0;
+}
+.Description{
+    line-height: 1.5em;
+    margin-bottom: 2em;
+}
+.Avg-est{
+    border-top: 1px solid rgba(255, 255, 255, 0.13);
+    margin-top: 1em;
+}
+.Avg-est p{
+    letter-spacing: 2.5px;
+    font-weight: 200;
+}
+.Avg-est span{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.95rem;
+}
+.Avg-est > div + div{
+margin-top: 2em;
 }
