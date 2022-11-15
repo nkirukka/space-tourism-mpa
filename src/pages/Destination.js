@@ -10,43 +10,47 @@ const Destination = () => {
 
   return (
     <section className='Destination'>
-      <div className='Planets'>
-        <h2 className='ff-barlow_cond'><span>01</span> PICK YOUR DESTINATION</h2>
-        <img src={images.png} alt={name} title={name} />
-      </div>
-      
-      <article className='Destination__details'>
-        <div>
-          {places.map((item, idx) => {
-            return <button
-              type='button'
-              className='ff-barlow_cond'
-              key={idx}
-              onClick={() => { setValue(idx) }}
-            >
-              {item.name.toUpperCase()}
-            </button>
-          })}
+      <div className='Destination__wrapper'>
+        <div className='Planets'>
+          <h2 className='ff-barlow_cond'><span>01</span> PICK YOUR DESTINATION</h2>
+          <img src={images.png} alt={name} title={name} />
         </div>
-        
-        <h3 className='ff-bellefair'>{name.toUpperCase()}</h3>
-        <p className='ff-barlow Description'>{description}</p>
-        
-        <article className='Avg-est'>
-
-          {/* Average */}
-          <div>
-            <p className='ff-barlow_cond'>AVG. DISTANCE</p>
-            <span className='ff-bellefair'>{distance}</span>
+      
+        <article className='Destination__details'>
+          <div className='Destination__buttons'>
+            {places.map((item, idx) => {
+              return <button
+                type='button'
+                className='ff-barlow_cond'
+                key={idx}
+                onClick={() => { setValue(idx) }}
+              >
+                {item.name.toUpperCase()}
+              </button>
+            })}
           </div>
+      
+          <h3 className='ff-bellefair'>{name.toUpperCase()}</h3>
+          <p className='ff-barlow Description'>{description}</p>
+        
+          <article className='Avg-est'>
 
-          {/* Distance */}
-          <div>
-            <p className='ff-barlow_cond'>EST. TRAVEL TIME</p>
-            <span className='ff-bellefair'>{travel}</span>
-          </div>
+            {/* Average */}
+            <div>
+              <p className='ff-barlow_cond'>AVG. DISTANCE</p>
+              <span className='ff-bellefair'>{distance}</span>
+            </div>
+
+            {/* Distance */}
+            <div>
+              <p className='ff-barlow_cond'>EST. TRAVEL TIME</p>
+              <span className='ff-bellefair'>{travel}</span>
+            </div>
+          </article>
+          
         </article>
-      </article>
+
+      </div>
     </section>
   );
 }

@@ -38,7 +38,7 @@ const Navbar = () => {
             <section className="Logo-container">
                 <img src={logo} alt='nav logo' />
             </section>
-            
+        
             <button className="Hamburger"
                 onClick={handleClick}>
                 <img src={hamburger} alt='open' />
@@ -46,6 +46,7 @@ const Navbar = () => {
             <nav className={`Nav ${isOpen ? 'active' : null}`}>
                 <div className={`Nav-group ${isOpen ? 'active' : null}`}>
                     <button className="Close"
+                        aria-label="Close nav menu"
                         onClick={() => { setIsOpen(false) }}>
                         <img src={closeIcon} alt="close" /></button>
                     <ul>
