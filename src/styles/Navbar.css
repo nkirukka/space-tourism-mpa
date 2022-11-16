@@ -66,7 +66,7 @@
   content: "";
   position: absolute;
   right: 0;
-  bottom: -1.6em;
+  bottom: 0;
   width: 0%;
   height: 2px;
   background: none repeat scroll 0 0 #ffffff;
@@ -116,8 +116,8 @@
     flex-direction: row;
     margin-top: 0;
   }
-  .Nav-group li::after {
-    bottom: -1.5em;
+  .Nav-group a::after {
+    bottom: -1.59em;
   }
   .Close {
     display: none;
