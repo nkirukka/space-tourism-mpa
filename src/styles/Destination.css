@@ -48,6 +48,11 @@
   transition: border-bottom 0.4s cubic-bezier(0.19, 1, 0.22, 1);
   cursor: pointer;
 }
+.Destination__details button.active{
+  color: #ffffff;
+  font-weight: 200;
+  border-bottom: 2px solid #fff;
+}
 .Destination__details button:hover,
 .Destination__details button:focus {
   color: #ffffff;
