@@ -14,7 +14,7 @@
   box-sizing: border-box;
 }
 html{
-  overflow-x: hidden;
+  overflow: hidden;
 }
 body {
   margin: 0;
