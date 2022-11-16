@@ -21,39 +21,41 @@ const Crew = () => {
   ]
   return (
     <section className='Crew'>
-    <div className='Crew__wrapper'>
-      <div className='People'>
-        <h2 className='ff-barlow_cond'><span>02</span> MEET YOUR CREW</h2>
+      <div className='Crew__wrapper'>
+        <div className='People'>
+          <h2 className='ff-barlow_cond'><span>02</span> MEET YOUR CREW</h2>
           <img
             src={images.png}
             alt={name}
             title={name}
             className='Crew__img'
           />
-      </div>
-    
-      <article className='Crew__details'>
-        <div className='Crew__buttons'>
-            {people.map((item, idx) => {
-            return <button
-              type='button'
-              className={`ff-barlow_cond ${active === idx ? 'active' : null}`}
-              key={Math.random()}
-              onClick={() => { setValue(idx); setActive(btns[idx].id) }}
-            >
-            </button>
-          })}
         </div>
     
-          <p className="ff-bellefair">{role.toUpperCase() }</p>
-        <h3 className='ff-bellefair'>{name.toUpperCase()}</h3>
-        <p className='ff-barlow Bio'>{bio}</p>
+        <article className='Crew__details'>
+          <div className='Crew__buttons'>
+            {people.map((item, idx) => {
+              return <button
+                type='button'
+                className={`ff-barlow_cond ${active === idx ? 'active' : null}`}
+                key={Math.random()}
+                onClick={() => { setValue(idx); setActive(btns[idx].id) }}
+              >
+              </button>
+            })}
+          </div>
+    
+          <div>
+            <p className="ff-bellefair Role">{role.toUpperCase()}</p>
+            <h3 className='ff-bellefair'>{name.toUpperCase()}</h3>
+            <p className='ff-barlow Bio'>{bio}</p>
+          </div>
         
-      </article>
+        </article>
 
-    </div>
-  </section>
-  )
+      </div>
+    </section>
+  );
 }
 
 export default Crew
