@@ -5,8 +5,21 @@ import { useState } from 'react';
 const Destination = () => {
   const [places] = useState(data.destinations);
   const [value, setValue] = useState(0);
+  const [active, setActive] = useState(null);
 
-  const { name, images, description, distance, travel } = places[value];
+  const {
+    name,
+    images,
+    description,
+    distance,
+    travel } = places[value];
+  
+    const btns = [
+      {id: 0},
+      {id: 1},
+      {id: 2},
+      {id: 3},
+    ]
 
   return (
     <section className='Destination'>
@@ -21,9 +34,9 @@ const Destination = () => {
             {places.map((item, idx) => {
               return <button
                 type='button'
-                className='ff-barlow_cond'
-                key={idx}
-                onClick={() => { setValue(idx) }}
+                className={`ff-barlow_cond ${active === idx ? 'active' : null}`}
+                key={Math.random()}
+                onClick={() => { setValue(idx); setActive(btns[idx].id) }}
               >
                 {item.name.toUpperCase()}
               </button>
