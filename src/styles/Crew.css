@@ -1,156 +1,178 @@
 .Crew {
-    background: url("../starter-code/assets/crew/background-crew-mobile.jpg")
+  background: url("../starter-code/assets/crew/background-crew-mobile.jpg")
+    no-repeat center/cover;
+  height: calc(120vh + 1px);
+  color: #d0d6f9;
+  text-align: center;
+  padding-top: 4em;
+}
+.People {
+  width: 85%;
+  margin: 2.5em auto 1.5em;
+  border-bottom: 1px solid #383b4b;
+}
+.People h2 {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 2.5px;
+}
+.People span {
+  font-size: 1rem;
+  font-weight: 100;
+  margin-right: 2px;
+  opacity: 0.6;
+}
+.Crew img {
+  margin-top: 2em;
+  margin-bottom: -0.2em;
+  margin-inline: auto;
+  width: 15em;
+  height: 18em;
+}
+
+.Crew__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-block: 2.2em;
+}
+.Crew__details {
+  width: 85%;
+  margin: auto;
+}
+.Crew__details button {
+  background: #979797;
+  border: none;
+  padding-bottom: 0.5em;
+  font-size: 1.4rem;
+  font-weight: 200;
+  letter-spacing: 2.5px;
+  border-radius: 50%;
+  transition: background 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  cursor: pointer;
+}
+.Crew__details button.active {
+  background: white;
+}
+.Crew__details button:hover,
+.Crew__details button:focus {
+  background: #ffffff;
+  font-weight: 200;
+}
+
+.Crew__details h3 {
+  color: #fff;
+  font-size: 1.9rem;
+  font-weight: 200;
+  margin: 0.5em auto;
+}
+.Role {
+  color: white;
+  opacity: 0.5;
+  letter-spacing: 1px;
+  font-weight: 100;
+}
+.Bio {
+  font-weight: 100;
+  line-height: 1.5em;
+  max-width: 500px;
+  margin: auto;
+  margin-bottom: 2em;
+}
+
+@media only screen and (min-width: 50em) {
+  .Crew {
+    background: url("../starter-code/assets/crew/background-crew-tablet.jpg")
       no-repeat center/cover;
-    height: calc(120vh + 1px);
-    color: #d0d6f9;
-    text-align: center;
-    padding-top: 4em;
+  }
+  .Crew__wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 8em;
   }
   .People {
-    width: 85%;
-    margin: 2.5em auto 1.5em;
-    border-bottom: 1px solid #383B4B;
+    border: none;
   }
   .People h2 {
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 300;
-    letter-spacing: 2.5px;
+    font-size: 1.4rem;
+    text-align: left;
+    position: absolute;
+    top: 6em;
   }
   .People span {
-    font-size: 1rem;
-    font-weight: 100;
-    margin-right: 2px;
-    opacity: 0.6;
-  }
-  .Crew img {
-    margin-top: 2em;
-    margin-bottom: -.2em;
-    margin-inline: auto;
-    width: 15em;
-    height: 18em;
-  }
-  
-  .Crew__buttons {
-    display: flex;
-    justify-content: center;
+    font-size: 1.4rem;
   }
   .Crew__details {
-    width: 85%;
-    margin: auto;
-  }
-  .Crew__details button {
-    background: transparent;
-    border: 2px solid white;
-    padding-bottom: 0.5em;
-    font-size: 1.4rem;
-    font-weight: 200;
-    letter-spacing: 2.5px;
-    border-radius: 50%;
-    transition: border-bottom 0.4s cubic-bezier(0.19, 1, 0.22, 1);
-    cursor: pointer;
-  }
-  .Crew__details button.active{
-    background: white;
-  }
-  .Crew__details button:hover,
-  .Crew__details button:focus {
-    background: #ffffff;
-    font-weight: 200;
-  }
-  .Crew__details button + button {
-    margin-left: 5px;
+    display: flex;
+    flex-direction: column-reverse;
   }
   .Crew__details h3 {
-    color: #fff;
-    font-size: 1.9rem;
-    font-weight: 200;
-    margin: 0.5em auto 0;
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+  }
+  .Crew__details p {
+    font-size: 1.115rem;
+  }
+  .Crew__buttons {
+    margin: 0;
+  }
+  .Crew img {
+    width: 19em;
+    height: 23em;
+    margin: 0;
   }
   .Bio {
-    font-weight: 100;
-    line-height: 1.5em;
-    max-width: 500px;
-    margin: auto;
-    margin-bottom: 2em;
+    max-width: 600px;
   }
-
-  
-  @media only screen and (min-width: 50em) {
-    .Crew {
-      background: url("../starter-code/assets/crew/background-crew-tablet.jpg")
-        no-repeat center/cover;
-    }
-    .People {
-      margin-top: 4em;
-    }
-    .People h2,
-    .People span {
-      font-size: 1.4rem;
-      text-align: left;
-    }
-    .Crew__details h3 {
-      font-size: 5rem;
-    }
-    .Crew__details p {
-      font-size: 1.3rem;
-    }
-    .Crew img {
-      width: 15em;
-      height: 15em;
-    }
-    .Crew__details button {
-      font-size: 1.9rem;
-      margin-top: 1em;
-    }
-    .Crew__details h3 {
-      margin-bottom: 0.5em;
-    }
-    .Bio {
-      max-width: 600px;
-    }
+}
+@media only screen and (min-width: 67em) {
+  .Crew {
+    background: url("../starter-code/assets/crew/background-crew-desktop.jpg")
+      no-repeat center/cover;
+    padding-top: 5em;
   }
-  @media only screen and (min-width: 67em) {
-    .Crew {
-      background: url("../starter-code/assets/crew/background-crew-desktop.jpg")
-        no-repeat center/cover;
-      padding-top: 5em;
-    }
-    .Crew__wrapper {
-      width: 90%;
-      margin-inline: auto;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      gap: 5em;
-    }
-
-    .People img {
-      width: 30em;
-      height: 30em;
-    }
-    .People h2,
-    .People span {
-      white-space: nowrap;
-      text-align: center;
-      /* margin: 0; */
-      font-size: 2.1rem;
-      margin-bottom: 3em;
-    }
-    .Crew__details {
-      text-align: left;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .Crew__details h3{
-     margin: 0;
-    }
-  .Crew__buttons{
-    margin-bottom: 3em;
+  .Crew__wrapper {
+    width: 90%;
+    margin-inline: auto;
+    flex-direction: row-reverse;
+    margin-top: 3em;
   }
-    .Bio{
-      margin: 0;
-    }
+  .People img {
+    width: 37em;
+    height: 41em;
+    margin-bottom: 0em;
   }
-  
+  .People h2,
+  .People span {
+    white-space: nowrap;
+    text-align: center;
+    font-size: 1.7rem;
+    left: 2.5em;
+    top: 5em;
+  }
+  .Crew__details {
+    text-align: left;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .Crew__details h3 {
+    margin: 0;
+    font-size: 3rem;
+  }
+  .Crew__details .Role{
+    font-size: 1.5rem;
+  }
+  .Crew__details .Bio{
+    font-size: 1.3rem;
+    margin-top: 1.2em;
+    padding-right: 2.3em;
+  }
+  .Crew__buttons {
+    margin-top: 7em;
+  }
+  .Bio {
+    margin: 0;
+    font-size: 4rem;
+  }
+}
