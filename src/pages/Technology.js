@@ -1,57 +1,49 @@
 import { useState } from "react";
 import { data } from "../starter-code/data";
+import '../styles/Technology.css';
 
 const Technology = () => {
   const [places] = useState(data.technology);
   const [value, setValue] = useState(0);
 
-  const { name, images, description, distance, travel } = places[value];
+  const { name, images, description } = places[value];
 
   return (
-    <section className='Destination'>
-    <div className='Destination__wrapper'>
-      <div className='Planets'>
-        <h2 className='ff-barlow_cond'><span>03</span> SPACE LAUNCH 101</h2>
-        <img src={images.png} alt={name} title={name} />
-      </div>
+    <section className='Technology'>
+      <h2 className='ff-barlow_cond Title'><span>03</span> SPACE LAUNCH 101</h2>
+      <div className='Technology__wrapper'>
+
+        <picture>
+          <source media="(max-width: 1010px)" srcSet={images.landscape} />
+          <source media="(min-width: 1010px)" srcSet={images.portrait} />
+          <img src={ images.landscape} alt={name} />
+        </picture>        
+        <article className='Technology__details'>
+          <div className='Technology__buttons'>
+            {places.map((item, idx) => {
+              return <button
+                type='button'
+                className='ff-bellefair'
+                key={idx}
+                onClick={() => { setValue(idx) }}
+              >
+                {idx+1}
+              </button>
+            })}
+          </div>
     
-      <article className='Destination__details'>
-        <div className='Destination__buttons'>
-          {places.map((item, idx) => {
-            return <button
-              type='button'
-              className='ff-barlow_cond'
-              key={idx}
-              onClick={() => { setValue(idx) }}
-            >
-              {item.name.toUpperCase()}
-            </button>
-          })}
-        </div>
-    
-        <h3 className='ff-bellefair'>{name.toUpperCase()}</h3>
-        <p className='ff-barlow Description'>{description}</p>
+          <div>
+          <small className="ff-barlow_cond">THE TERMINOLOGY...</small>
+          <h3 className='ff-bellefair'>{name.toUpperCase()}</h3>
+          <p className='ff-barlow Description'>{description}</p>
       
-        <article className='Avg-est'>
-
-          {/* Average */}
-          <div>
-            <p className='ff-barlow_cond'>AVG. DISTANCE</p>
-            <span className='ff-bellefair'>{distance}</span>
-          </div>
-
-          {/* Distance */}
-          <div>
-            <p className='ff-barlow_cond'>EST. TRAVEL TIME</p>
-            <span className='ff-bellefair'>{travel}</span>
-          </div>
-        </article>
+         </div>
         
-      </article>
+        </article>
 
-    </div>
-  </section>
-  )
+      </div>
+    </section>
+  );
 }
 
 export default Technology

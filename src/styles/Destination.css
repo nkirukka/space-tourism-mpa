@@ -41,6 +41,7 @@
   background: none;
   border: none;
   border-bottom: 2px solid transparent;
+  padding: 0;
   padding-bottom: 0.5em;
   font-size: 1.4rem;
   font-weight: 200;
@@ -60,7 +61,7 @@
   border-bottom: 2px solid #fff;
 }
 .Destination__details button + button {
-  margin-left: 5px;
+  margin-left: 10px;
 }
 .Destination__details h3 {
   color: #fff;
